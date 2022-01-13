@@ -8,3 +8,9 @@ body,
 html {
   height: 100%;
 }
+
+.Legend {
+  line-height: 25px;
+}
+
+

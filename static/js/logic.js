@@ -57,4 +57,30 @@ function getRadius(mag) {
     return mag * 3;
 };
 
+function Legend() {
+    var mapLegend = L.control ({position: "bottomright"});
+    mapLegend.onAdd = function (map) {
+        var div = L.DomUtil.create("div", "Legend");
+        div.innerHTML += '<h3>depth</h3>';
+        div.innerHTML += '<i style="background: #98ee00"></i><span>0 - 10</span><br>';
+          div.innerHTML += '<i style="background: #d4ee00"></i><span>11 - 29</span><br>';
+          div.innerHTML += '<i style="background: #eecc00"></i><span>30 - 49</span><br>';
+          div.innerHTML += '<i style="background: #ee9c00"></i><span>50 - 69</span><br>';
+          div.innerHTML += '<i style="background: #ea822c"></i><span>70 - 89</span><br>';
+          div.innerHTML += '<i style="background: #ea2c2c"></i><span>90 - 100</span><br>';
+          div.innerHTML += '<i style="background: #ea2c2c"></i><span>100+</span><br>';
+          return div;
+
+
+
+        // var depth = [0,10,30,50,70,90];
+        // var colors = ['#98ee00','#d4ee00','#eecc00','#ee9c00','#ea822c','#ea2c2c'];        
+    //     for (var i; i < depth.length; i++)
+    //         div.innerHTML += "<i style ='background:" + colors(depth[i] + 1) + "'></i> " + depth[i] + (depth[i + 1] ? "&ndash;" + depth[i + 1] + "<br>" : "+" );
+    // }
+    // return div; 
+}
+Legend.addTo(map);
+};
+
 
